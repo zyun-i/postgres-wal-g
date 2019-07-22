@@ -4,7 +4,6 @@ services:
   wal-g:
     build: .
     environment:
-#     - "WALG_FILE_PREFIX=/tmp"
 #     - "WALG_COMPRESSION_METHOD=brotli"
       - "WALE_S3_PREFIX=s3://wal-g/sub"  
       - "AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE"
@@ -14,8 +13,8 @@ services:
       - "AWS_REGION=ap-northeast-1"
       - "PGHOST=/var/run/postgresql"
     volumes:
-#     - ./data:/var/lib/postgresql/data
       - ./postgresql.conf:/etc/postgresql/postgresql.conf
+    command: ["-c", "config_file=/etc/postgresql/postgresql.conf"]
 
   s3:
     image: minio/minio
