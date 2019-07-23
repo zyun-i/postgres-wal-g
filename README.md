@@ -1,9 +1,11 @@
 # postgres-wal-g
 
 [![GitHub release](https://img.shields.io/github/release/zyun-i/postgres-wal-g.svg)][releases]
+[![Travis CI build status](https://img.shields.io/travis/zyun-i/postgres-wal-g/master.svg?label=Travis%20CI)][travis]
 [![Docker Pulls](https://img.shields.io/docker/pulls/zyun1/postgres-wal-g.svg)][docker]
 
 [releases]: https://github.com/zyun-i/postgres-wal-g/releases
+[travis]: https://travis-ci.org/docker-library/postgres/branches
 [docker]: https://hub.docker.com/r/zyun1/postgres-wal-g/
 
 PostgreSQL docker image with [wal-g](https://github.com/wal-g/wal-g).
@@ -45,7 +47,7 @@ cron.
 
 ```
 @daily /usr/local/bin/wal-g backup-push ${PGDATA}
-@weekly /usr/local/bin/wal-g delete retain 10 --confirm  
+@weekly /usr/local/bin/wal-g delete retain 10 --confirm
 ```
 
 ## Test
