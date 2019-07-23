@@ -6,7 +6,7 @@
 
 postgresql.conf
 
-```
+```conf
 archive_mode = on
 archive_command = '/usr/local/bin/wal-g wal-push %p'
 archive_timeout = 60
@@ -16,7 +16,7 @@ archive_timeout = 60
 
 s3 example:
 
-```
+```env
 WALG_COMPRESSION_METHOD=brotli
 WALE_S3_PREFIX=s3://example-bucket/postgres
 AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
@@ -38,4 +38,11 @@ cron.
 ```
 @daily /usr/local/bin/wal-g backup-push ${PGDATA}
 @weekly /usr/local/bin/wal-g delete retain 10 --confirm  
+```
+
+## Test
+
+```sh
+docker-compose build
+docker-compose up -d
 ```

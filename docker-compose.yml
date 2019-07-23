@@ -4,7 +4,7 @@ services:
   wal-g:
     build: .
     environment:
-#     - "WALG_COMPRESSION_METHOD=brotli"
+      - "WALG_COMPRESSION_METHOD=brotli"
       - "WALE_S3_PREFIX=s3://wal-g/sub"  
       - "AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE"
       - "AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
