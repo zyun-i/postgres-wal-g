@@ -2,10 +2,10 @@ version: '3'
 
 services:
   wal-g:
-    build: .
+    build: ./11/
     environment:
       - "WALG_COMPRESSION_METHOD=brotli"
-      - "WALE_S3_PREFIX=s3://wal-g/sub"  
+      - "WALE_S3_PREFIX=s3://wal-g/sub"
       - "AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE"
       - "AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
       - "AWS_ENDPOINT=http://s3:9000"

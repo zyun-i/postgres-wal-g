@@ -1,0 +1,24 @@
+language: bash
+services: docker
+
+env:
+  - VERSION=11
+
+install:
+  - git clone https://github.com/zyun-i/postgres-wal-g.git ~/postgres-wal-g
+
+before_script:
+  - env | sort
+  - cd "$VERSION/$VARIANT"
+  - image="postgres-wal-g:${VERSION}${VARIANT:+-${VARIANT}}"
+
+script:
+  - |
+    (
+      set -Eeuo pipefail
+      set -x
+      docker build -t "$image" .
+    )
+
+after_script:
+  - docker images
