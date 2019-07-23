@@ -1,5 +1,13 @@
 # postgres-wal-g
 
+[![GitHub release](https://img.shields.io/github/release/zyun-i/postgres-wal-g.svg)][releases]
+[![Docker Pulls](https://img.shields.io/docker/pulls/zyun-i/postgres-wal-g.svg)][docker]
+
+[releases]: https://github.com/zyun-i/postgres-wal-g/releases
+[docker]: https://hub.docker.com/r/zyun-i/postgres-wal-g/
+
+PostgreSQL docker image with [wal-g](https://github.com/wal-g/wal-g).
+
 ## Settings
 
 ### PostgreSQL
