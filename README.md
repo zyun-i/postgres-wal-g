@@ -5,7 +5,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/zyun1/postgres-wal-g.svg)][docker]
 
 [releases]: https://github.com/zyun-i/postgres-wal-g/releases
-[travis]: https://travis-ci.org/docker-library/postgres/branches
+[travis]: https://travis-ci.org/zyun-i/postgres-wal-g/branches
 [docker]: https://hub.docker.com/r/zyun1/postgres-wal-g/
 
 PostgreSQL docker image with [wal-g](https://github.com/wal-g/wal-g).
